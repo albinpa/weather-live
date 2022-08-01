@@ -38,8 +38,20 @@ The Server port is 5000 and the client port is 3000 .You need to have Mapbox API
 ### Outgoing Api calls...
 
 This project uses WeatherApi  for getting the realtime weather and the icons.
+You need to have an api key.it is available in weatherapi.com
+Weather api = http://api.weatherapi.com/v1/forecast.json?key={USE YOUR KEY HERE}&q=${cityname}&days=${days}&aqi=no&alerts=no
+
 This project also uses Mapbox map for displying the extreme weather conditions .
+You need to have an api key.it is available in Mapbox website
+
+###  Api calls from client to server...
 
 
+api call for getting the extreme weather areas = "http://localhost:5000/getExtreme" method get
+api call for adding or searching cityname also used for updating = "http://localhost:5000/add" method post
+api call for get recent weather info for top cities = http://localhost:5000/weather method get
+api call for creating new users = http://localhost:5000/api/users method post
+api call for logging in = http://localhost:5000/api/auth method post
+! the route and query for deleting the weather documents from weather collections are written ,but not used.if you want to implement that feature you only have to call to that route from client.
 
 
