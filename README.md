@@ -30,7 +30,7 @@
 ### How to use...
 
 Clone this app and run npm install command that will install all the dependancies, if you are using for develepment purposes run   npm run dev .
-The MongoDB version using is 3.2 but you are free to use any version .First uninstall mongodb by typing npm uninstall mongodb and then install adequte versions.
+The MongoDB version using is 3.2 but you are free to use any version, port used is 27017.First uninstall mongodb by typing npm uninstall mongodb and then install adequte versions.
 The Server port is 5000 and the client port is 3000 .You need to have Mapbox API key for running this project .It is available in Mapbox website.Then run npm start command on server and then on client.
 
 
