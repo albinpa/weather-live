@@ -10,11 +10,11 @@ const weatherController = require('../controller/weatherController');
 function weatherUpdate(cityname, objectId) {
 
     weatherController.getWeather(cityname).then((response) => {
-        console.log(response)
+       
         let weather = response
 
         var today = new Date().toISOString().slice(0, 10);
-        console.log(today);
+        
         weather['updated-on'] = today
         db.get().collection('weather').updateOne({ _id: objectId }, {
             $set: weather
@@ -82,7 +82,7 @@ router.post('/add', async (req, res) => {
             let dataId = weather._id
             let objectId = new ObjectID(dataId)
             weatherUpdate(data.cityname, objectId)
-            let newWeather = await db.get().collection('weather').findOne({ cityname: data.cityname })
+            let newWeather = await db.get().collection('weather').findOne({ _id: objectId })
             return res.status(200).json({ data: newWeather })
 
         }
