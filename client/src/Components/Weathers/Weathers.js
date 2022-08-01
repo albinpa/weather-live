@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Weather from '../Weather/Weather';
 
-function History() {
+function Weathers() {
 
     const [weathers, setWeathers] = useState([])
 
     //get latest weathers of 20 cities....
     useEffect(() => {
 
-        axios.get("http://localhost:5000/weather/").then((response) => {
+        axios.get("http://localhost:5000/weather").then((response) => {
             let data = response.data
             setWeathers(data);
         })
@@ -34,7 +34,7 @@ function History() {
                                     />
                                 </div>
                             )
-                        })};
+                        })}
                     </div>
                 </div>
             </div>
@@ -43,4 +43,4 @@ function History() {
     )
 }
 
-export default History;
+export default Weathers;
