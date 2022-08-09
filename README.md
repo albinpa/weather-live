@@ -28,6 +28,32 @@
 </ul>
 
 ### How to use...
+   #### Creating the Build
+       To create the build for the entire application, you need to run the following command: docker-compose build
+    
+   #### Starting the Services
+    
+       You can start the multi-container system using the following simple command: docker-compose up
+
+       You can open http://localhost:3000 to see our React Frontend.
+
+       The backend server is live on http://localhost:5000
+
+       And MongoDB is running on http://localhost:27017
+    
+   #### Maintenance and Inspection
+       
+       
+       You can inspect running services using the 'docker-compose ps' command.
+
+       The 'docker-compose logs' will dump logs of all the running services.
+   #### Stoping the services
+      
+      To stop all the services, we use docker-compose stop.
+
+      Using docker-compose down --volumes brings everything down, removing the containers entirely, with the data volume of the services.
+      
+  #### Run without docker
 
 Clone this app and run npm install command that will install all the dependancies, if you are using for develepment purposes run   npm run dev .
 The MongoDB version using is 3.2 but you are free to use any version, port used is 27017.First uninstall mongodb by typing npm uninstall mongodb and then install adequte versions.
