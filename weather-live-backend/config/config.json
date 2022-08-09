@@ -4,7 +4,7 @@
     "name": "weather-live-backend"
   },
   "db": {
-    "host": "localhost",
+    "host": "mongo",
     "port": 27017,
     "name": "weather-live"
   },
